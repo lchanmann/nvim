@@ -32,3 +32,9 @@ vim.keymap.set(
   "<cmd>Telescope find_files search_dirs={'build'}<CR>",
   { desc = "Find Generated Files" }
 )
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>fm",
+  "<cmd>Telescope media_files<CR>",
+  { desc = "Find Media Files" }
+)
