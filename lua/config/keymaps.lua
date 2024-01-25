@@ -38,3 +38,6 @@ vim.keymap.set(
   "<cmd>Telescope media_files<CR>",
   { desc = "Find Media Files" }
 )
+
+-- Resume telescope search
+vim.keymap.set("n", "<leader>fx", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume Telescope Search" })
