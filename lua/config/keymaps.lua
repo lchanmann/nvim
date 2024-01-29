@@ -2,9 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>fd", builtin.find_files, { desc = "Find Files (*)" })
-
 -- ChatGPT keymaps
 vim.keymap.set({ "n", "v" }, "<leader>Cc", "<cmd>ChatGPT<CR>", { desc = "ChatGPT" })
 vim.keymap.set({ "n", "v" }, "<leader>Ce", "<cmd>ChatGPTEditWithInstruction<CR>", { desc = "Edit with instruction" })
@@ -26,6 +23,9 @@ vim.keymap.set(
 )
 
 -- Telescope keymaps
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>fd", builtin.find_files, { desc = "Find Files (*)" })
+
 vim.keymap.set(
   { "n", "v" },
   "<leader>fg",
@@ -40,4 +40,4 @@ vim.keymap.set(
 )
 
 -- Resume telescope search
-vim.keymap.set("n", "<leader>fx", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume Telescope Search" })
+vim.keymap.set("n", "<leader>fx", builtin.resume, { noremap = true, silent = true, desc = "Resume Telescope Search" })
