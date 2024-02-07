@@ -47,4 +47,14 @@ return {
       current_line_blame = true,
     },
   },
+
+  -- zen-mode + twillight
+  {
+    "folke/zen-mode.nvim",
+    event = "BufRead",
+    keys = {
+      { "<leader>z", "<cmd>:ZenMode<cr>", desc = "Zen Mode" },
+    },
+  },
+  { "folke/twilight.nvim" },
 }

@@ -41,3 +41,6 @@ vim.keymap.set(
 
 -- Resume telescope search
 vim.keymap.set("n", "<leader>fx", builtin.resume, { noremap = true, silent = true, desc = "Resume Telescope Search" })
+
+-- Twilight keymaps
+vim.keymap.set({ "n", "v" }, "<leader>t", "<cmd>Twilight<CR>", { desc = "Twilight" })
