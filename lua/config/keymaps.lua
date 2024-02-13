@@ -44,3 +44,7 @@ vim.keymap.set("n", "<leader>fx", builtin.resume, { noremap = true, silent = tru
 
 -- Twilight keymaps
 vim.keymap.set({ "n", "v" }, "<leader>t", "<cmd>Twilight<CR>", { desc = "Twilight" })
+
+-- Floating terminal on always cwd instead of opening terminal of project in git submodule
+local Util = require("lazyvim.util")
+vim.keymap.set("n", "<c-_>", function() Util.terminal() end, { desc = "Terminal (cwd)" })
