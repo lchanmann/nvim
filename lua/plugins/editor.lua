@@ -48,6 +48,15 @@ return {
     },
   },
 
+  -- vim-fugitive for git blame and file history
+  {
+    "tpope/vim-fugitive",
+    keys = {
+      { "<leader>gl", "<cmd>:Git log -p -- %<cr>", desc = "Show history" },
+      { "<leader>gb", "<cmd>:Git blame<cr>", desc = "Git Blame" },
+    },
+  },
+
   -- zen-mode + twillight
   {
     "folke/zen-mode.nvim",
