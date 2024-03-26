@@ -12,3 +12,9 @@ vim.api.nvim_create_autocmd("TermOpen", {
   command = "startinsert | set winfixheight"
 })
 
+-- -- no swpfile for gopass edit - https://github.com/gopasspw/gopass/blob/master/docs/setup.md#optional-post-installation-steps
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  group = "custom_buffer",
+  pattern = { "/dev/shm/gopass*", "/private/**/gopass**" },
+  command = 'setlocal noswapfile nobackup noundofile shada=""'
+})
