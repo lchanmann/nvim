@@ -5,4 +5,8 @@
 vim.g.autoformat = false
 vim.wo.colorcolumn = "80,120,180"
 
+vim.opt.title = true
+vim.opt.titlestring = "nvim: %F"
+vim.opt.titlelen = 80
+
 -- vim.opt.winbar = "%=%m %f"
