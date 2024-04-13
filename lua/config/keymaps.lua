@@ -45,6 +45,12 @@ vim.keymap.set("n", "<leader>fx", builtin.resume, { noremap = true, silent = tru
 -- Twilight keymaps
 vim.keymap.set({ "n", "v" }, "<leader>t", "<cmd>Twilight<CR>", { desc = "Twilight" })
 
--- Floating terminal on always cwd instead of opening terminal of project in git submodule
-local Util = require("lazyvim.util")
-vim.keymap.set("n", "<c-_>", function() Util.terminal() end, { desc = "Terminal (cwd)" })
+-- NOTE: "Terminal (cwd)" below prevents it from cd-ing into new git worktree branch (not desirable)
+--
+-- -- Floating terminal on always cwd instead of opening terminal of project in git submodule
+-- local Util = require("lazyvim.util")
+-- vim.keymap.set("n", "<c-_>", function() Util.terminal() end, { desc = "Terminal (cwd)" })
+
+-- git-worktree keymaps
+vim.keymap.set("n", "<leader>gw", "<CMD>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", { silent = true, desc = "Git worktrees" })
+vim.keymap.set("n", "<leader>gW", "<CMD>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>", { silent = true, desc = "Git worktree (add)" })
