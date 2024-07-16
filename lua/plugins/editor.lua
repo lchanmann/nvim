@@ -4,9 +4,8 @@ return {
     event = "VeryLazy",
     opts = {
       plugins = { spelling = true },
-      defaults = {
-        mode = { "n", "v" },
-        ["<leader>C"] = { name = "+ChatGPT" },
+      spec = {
+        { "<leader>C", group = "ChatGPT", mode = { "n", "v" } }
       },
     },
   },
