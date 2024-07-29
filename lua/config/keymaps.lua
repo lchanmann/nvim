@@ -2,6 +2,13 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Motion keymaps
+-- center <C-d> and <C-u>
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
+-- move along <C-e> and <C-y>
+vim.api.nvim_set_keymap('n', '<C-e>', '<C-e>j', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-y>', '<C-y>k', { noremap = true, silent = true })
+
 -- ChatGPT keymaps
 vim.keymap.set({ "n", "v" }, "<leader>Cc", "<cmd>ChatGPT<CR>", { desc = "ChatGPT" })
 vim.keymap.set({ "n", "v" }, "<leader>Ce", "<cmd>ChatGPTEditWithInstruction<CR>", { desc = "Edit with instruction" })
