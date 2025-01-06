@@ -46,7 +46,7 @@ vim.keymap.set(
   { desc = "Find Media Files" }
 )
 
--- Resume telescope search
+-- Resume telescope search, use fzflua resume instead (https://github.com/LazyVim/LazyVim/pull/5138)
 vim.keymap.set("n", "<leader>fx", builtin.resume, { noremap = true, silent = true, desc = "Resume Telescope Search" })
 
 -- Twilight keymaps
