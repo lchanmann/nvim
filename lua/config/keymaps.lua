@@ -61,3 +61,6 @@ vim.keymap.set({ "n", "v" }, "<leader>t", "<cmd>Twilight<CR>", { desc = "Twiligh
 -- git-worktree keymaps
 vim.keymap.set("n", "<leader>gw", "<CMD>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", { silent = true, desc = "Git worktrees" })
 vim.keymap.set("n", "<leader>gW", "<CMD>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>", { silent = true, desc = "Git worktree (add)" })
+
+-- gitsigns hunk preview
+vim.keymap.set("n", "<leader>ghP", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Preview Hunk" })
