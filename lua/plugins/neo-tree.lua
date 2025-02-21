@@ -13,6 +13,7 @@ return {
             ".DS_Store",
             "thumbs.db",
             "classes",
+            "bin",
           },
         },
       },
